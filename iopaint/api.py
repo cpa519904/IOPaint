@@ -186,7 +186,9 @@ class Api:
     def api_save_image(self, file: UploadFile):
         # Sanitize filename to prevent path traversal
         safe_filename = Path(file.filename).name  # Get just the filename component
-
+        print(f"{safe_filename=}")
+        if '_cleanup' in safe_filename:
+            safe_filename=safe_filename.replace('_cleanup','')
         # Construct the full path within output_dir
         output_path = self.config.output_dir / safe_filename
 

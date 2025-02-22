@@ -549,7 +549,7 @@ export default function Editor(props: EditorProps) {
     }
 
     // TODO: download to output directory
-    const name = file.name.replace(/(\.[\w\d_-]+)$/i, "_cleanup$1")
+    const name = file.name.replace(/(\.[\w\d_-]+)$/i, "$1")
     const curRender = renders[renders.length - 1]
     downloadImage(curRender.currentSrc, name)
     if (settings.enableDownloadMask) {

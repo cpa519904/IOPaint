@@ -136,3 +136,12 @@ python3 main.py start --model lama --port 8080
 Then you can visit `http://localhost:5173/` for development.
 The frontend code will automatically update after being modified,
 but the backend needs to restart the service after modifying the python code.
+
+
+python main.py --image 'F:\CD\0213\' --output 'F:\CD_SUCCESS\0213\' --model-dir model/ --watermark_type istock
+
+iopaint run --image 'F:\CD\0213\' --output 'F:\CD_SUCCESS\0213\' --mask  'F:\CD_SUCCESS\0213\ --model=lama
+iopaint run --model=lama --device=cpu \
+--image=/path/to/image_folder \
+--mask=/path/to/mask_folder \
+--output=output_dir
